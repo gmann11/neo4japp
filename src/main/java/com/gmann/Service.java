@@ -12,7 +12,6 @@ import org.slf4j.LoggerFactory;
 import org.apache.commons.configuration.*;
 import org.neo4j.helpers.collection.MapUtil;
 import com.google.gson.Gson;
-//import javax.json.*;
 
 public class Service implements AutoCloseable {
   private final Driver driver;
@@ -134,23 +133,4 @@ public class Service implements AutoCloseable {
     }
     return new Gson().toJson(res);
   }
-
-/*
-  public static void main( String... args ) throws Exception {
-    config = new PropertiesConfiguration("neoapp.properties");
-    try ( Service x = new Service( config.getString("uri"), config.getString("username"), config.getString("password")) ) {
-      Employee test = new Employee("george jetson", 131);
-      String y = x.addEmployee(test);
-      System.out.println("RES::" + y);
-      //x.addEmployee( "jj mann", 126);
-      //x.printEmployees();
-      //x.getEmployees("gary mann");
-      System.out.println(x.getEmployees());
-      System.out.println(x.getEmployee("0"));
-      System.out.println(x.getEmployee("x"));
-      System.out.println(x.getEmployee("999"));
-      x.delEmployee("999");
-    }
-  }
-*/
 }
