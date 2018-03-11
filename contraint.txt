@@ -1,2 +1,1 @@
-match (Employee) detach delete Employee;
- CREATE CONSTRAINT ON (emp:Employee) ASSERT emp.emp_id IS UNIQUE;
+CREATE CONSTRAINT ON (emp:Employee) ASSERT emp.emp_id IS UNIQUE;
